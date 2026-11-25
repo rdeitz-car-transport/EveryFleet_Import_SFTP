@@ -1,0 +1,8 @@
+option batch abort
+option confirm off
+lcd C:\FileWatch\Script\EveryFleet_SFTP\BNSF\Import
+open sftp://CAR_EDI@files.everyfleet.com/ -hostkey="ssh-rsa 4096 hQSpCCcl7QzM9BR5JR6XI9jiZylnGEn6w7zSKARf0eY" -privatekey="C:\FileWatch\Script\EveryFleet_SFTP\id_ed25519.ppk" -passphrase="BlueThunder!47River"
+cd /IMPORT/BNSF
+put -nopreservetime -nopermissions "*.*"
+exit
+
